@@ -7,11 +7,11 @@ import java.net.*;
  
 public class Server {
 
-  Socket request;
-  BufferedReader in;
-  PrintWriter out;
+  public static void main(String[] args) throws Exception {
+    Socket request;
+    BufferedReader in;
+    PrintWriter out;
 
-  public void main(String[] args) throws Exception {
     // if port wasn't given
     if (args.length != 1) {
       System.out.println("Required arguments: port");
@@ -39,7 +39,7 @@ public class Server {
 
         // writer to send messages back to client
         out = new PrintWriter(request.getOutputStream(), true);
-        
+
         // get line from client and send it back to client
         out.println(in.readLine());
       }

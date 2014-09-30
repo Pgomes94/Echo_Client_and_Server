@@ -1,8 +1,11 @@
 This is the java files for an Echo Server and Echo Client
 
 HOW TO USE:
+
 compile the server and client
+
 javac Server.java
+
 javac Client.java
 
 run the server first
